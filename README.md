@@ -1,3 +1,4 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/njarajames/Fail2Ban-Postfix)
  ``# Fail2Ban Installation and Configuration Guide This guide will walk you through the installation and configuration of Fail2Ban on an Ubuntu server, including setting up a custom action to send email notifications using the `echo` command.
 
 ## Configuration of Postfix for Email Sending

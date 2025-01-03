@@ -41,7 +41,15 @@ Edit the Fail2Ban jail configuration file:
 
 Add or modify the `[sshd]` section as follows:
 
-`[sshd] enabled  = true port     = ssh filter   = sshd logpath  = /var/log/auth.log maxretry = 3 findtime = 300 bantime  = 60 ignoreip = 127.0.0.1`
+`[sshd] 
+enabled  = true
+port     = ssh 
+filter   = sshd 
+logpath  = /var/log/auth.log 
+maxretry = 3 
+findtime = 300 
+bantime  = 60 
+ignoreip = 127.0.0.1`
 
 
 ## Creating a Custom Action
@@ -52,7 +60,14 @@ Create a custom action file to send email notifications using the `echo` command
 
 Add the following content:
 
-`[Definition] actionstart = actionstop = actioncheck = actionban = echo "Subject: Fail2Ban Alert: <name> ban of <ip>" | /usr/bin/mail -a "From: fail2ban@example.com" your_email@example.com actionunban =  [Init] name = default`
+`[Definition] 
+actionstart = 
+actionstop = 
+actioncheck = 
+actionban = echo "Subject: Fail2Ban Alert: <name> ban of <ip>" | /usr/bin/mail -a "From: fail2ban@example.com" your_email@example.com 
+actionunban =  
+[Init] 
+name = default`
 
 ## Updating the Jail Configuration
 
